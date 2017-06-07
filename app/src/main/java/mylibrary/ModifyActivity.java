@@ -22,7 +22,7 @@ public class ModifyActivity extends AppCompatActivity {
     private EditText edAltura;
     private EditText edPeso;
 
-    private long id;
+    private int id;
 
     private boolean isItemDeleted = false;
 
@@ -31,6 +31,8 @@ public class ModifyActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        id = 0;
 
         setContentView(R.layout.activity_modify);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -49,21 +51,21 @@ public class ModifyActivity extends AppCompatActivity {
 
         Bundle intentData = getIntent().getExtras();
 
-        final String myID = intentData.getString("idPessoa");
+        final String myID = intentData.getString("_id");
         final String nome = intentData.getString("Nome");
         final String sobrenome = intentData.getString("Sobrenome");
-        /*final String idade = intentData.getString("Idadade");
+        final String idade = intentData.getString("Idade");
         final String altura = intentData.getString("Altura");
-        final String peso = intentData.getString("Peso");*/
+        final String peso = intentData.getString("Peso");
 
 
         edNome.setText(nome);
         edSobrenome.setText(sobrenome);
-      /*  edIdade.setText(idade);
+        edIdade.setText(idade);
         edAltura.setText(altura);
-        edPeso.setText(peso);*/
+        edPeso.setText(peso);
 
-        id = Long.parseLong(myID);
+        id = Integer.parseInt(myID);
 
         FloatingActionButton fabDelete = (FloatingActionButton) findViewById(R.id.fabDelete);
         FloatingActionButton fabUpdate = (FloatingActionButton) findViewById(R.id.fabUpdate);
@@ -83,9 +85,9 @@ public class ModifyActivity extends AppCompatActivity {
                     public void onClick(View v) {
                         String newNome = edNome.getText().toString();
                         String newSobrenome = edSobrenome.getText().toString();
-                        String newIdade = edIdade.getText().toString();
-                        String newAltura = edAltura.getText().toString();
-                        String newPeso = edPeso.getText().toString();
+                        String newIdade = edIdade.getText().toString()+" anos";
+                        String newAltura = edAltura.getText().toString()+"m";
+                        String newPeso = edPeso.getText().toString()+"kg";
 
                         dbManager.update(Integer.parseInt(myID), newNome, newSobrenome, newIdade, newAltura, newPeso);
                         returnHome();
@@ -97,7 +99,7 @@ public class ModifyActivity extends AppCompatActivity {
     public void returnHome() {
         Intent intent = new Intent(getApplicationContext(), MainActivity.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         if (isItemDeleted) {
-            intent.putExtra("ItemDeleted", true);
+            intent.putExtra("Aluno Removido!", true);
         }
         startActivity(intent);
     }

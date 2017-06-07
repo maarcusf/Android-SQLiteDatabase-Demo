@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
 
     final String[] from = new String[]{dbHelper.ID, dbHelper.NOME, dbHelper.SOBRENOME, dbHelper.ALTURA,dbHelper.IDADE, dbHelper.PESO,
     };
-    final int[] to = new int[]{R.id.id, R.id.listNome, R.id.listSobrenome};
+    final int[] to = new int[]{R.id.id, R.id.listNome, R.id.listSobrenome, R.id.listIdade, R.id.listAltura, R.id.listPeso};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,15 +73,26 @@ public class MainActivity extends AppCompatActivity {
                 TextView itemID = (TextView) view.findViewById(R.id.id);
                 TextView itemNome = (TextView) view.findViewById(R.id.listNome);
                 TextView itemSobrenome = (TextView) view.findViewById(R.id.listSobrenome);
+                TextView itemIdade = (TextView) view.findViewById(R.id.listIdade);
+                TextView itemAltura = (TextView) view.findViewById(R.id.listAltura);
+                TextView itemPeso = (TextView) view.findViewById(R.id.listPeso);
 
                 String myId = itemID.getText().toString();
                 String myNome = itemNome.getText().toString();
                 String mySobrenome = itemSobrenome.getText().toString();
+                String myIdade = itemIdade.getText().toString()+" anos";
+                String myAltura = itemAltura.getText().toString()+"m";
+                String myPeso = itemPeso.getText().toString()+"kg";
 
                 Intent intent = new Intent(getApplicationContext(), ModifyActivity.class);
-                intent.putExtra("IdPessoa", myId);
+                intent.putExtra("_id", myId);
                 intent.putExtra("Nome", myNome);
                 intent.putExtra("Sobrenome", mySobrenome);
+                intent.putExtra("Idade", myIdade);
+                intent.putExtra("Altura", myAltura);
+                intent.putExtra("Peso", myPeso);
+
+
                 startActivity(intent);
 
                 return false;
