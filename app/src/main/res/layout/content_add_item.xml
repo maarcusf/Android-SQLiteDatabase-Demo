@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="mylibrary.AddItem"
+    tools:showIn="@layout/activity_add_item">
+
+    <ImageButton
+        android:id="@+id/inputImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="pickPhoto2"
+        app:srcCompat="@drawable/bixim"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:id="@+id/idSobrenome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/idNome"
+        android:layout_below="@+id/idNome"
+        android:ems="10"
+        android:hint="Sobrenome"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/idNome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/inputImageButton"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:hint="Nome"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/idIdade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Idade"
+        android:inputType="numberDecimal"
+        android:layout_below="@+id/idSobrenome"
+        android:layout_alignStart="@+id/idSobrenome" />
+
+    <EditText
+        android:id="@+id/idAltura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/idIdade"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:hint="Altura"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/idPeso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/idAltura"
+        android:layout_below="@+id/idAltura"
+        android:ems="10"
+        android:hint="Peso"
+        android:inputType="number" />
+
+
+</RelativeLayout>
