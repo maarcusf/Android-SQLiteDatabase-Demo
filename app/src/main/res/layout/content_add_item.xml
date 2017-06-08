@@ -8,64 +8,82 @@
     tools:context="mylibrary.AddItem"
     tools:showIn="@layout/activity_add_item">
 
-    <ImageButton
-        android:id="@+id/inputImageButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="pickPhoto2"
-        app:srcCompat="@drawable/bixim"
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="1"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignParentStart="true">
 
-    <EditText
-        android:id="@+id/idSobrenome"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/idNome"
-        android:layout_below="@+id/idNome"
-        android:ems="10"
-        android:hint="Sobrenome"
-        android:inputType="textPersonName" />
+        <ImageButton
+            android:id="@+id/inputImageButton"
+            android:layout_width="match_parent"
+            android:layout_height="164dp"
+            android:layout_weight="0.38"
+            android:adjustViewBounds="true"
+            android:cropToPadding="false"
+            android:onClick="pickPhoto2"
+            android:visibility="visible"
+            app:srcCompat="@drawable/photo" />
 
-    <EditText
-        android:id="@+id/idNome"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/inputImageButton"
-        android:layout_centerHorizontal="true"
-        android:ems="10"
-        android:hint="Nome"
-        android:inputType="textPersonName" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
-    <EditText
-        android:id="@+id/idIdade"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Idade"
-        android:inputType="numberDecimal"
-        android:layout_below="@+id/idSobrenome"
-        android:layout_alignStart="@+id/idSobrenome" />
+            <EditText
+                android:id="@+id/idNome"
+                android:layout_width="182dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="Nome"
+                android:inputType="textPersonName" />
 
-    <EditText
-        android:id="@+id/idAltura"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/idIdade"
-        android:layout_centerHorizontal="true"
-        android:ems="10"
-        android:hint="Altura"
-        android:inputType="number" />
+            <EditText
+                android:id="@+id/idSobrenome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="Sobrenome"
+                android:inputType="textPersonName" />
+        </LinearLayout>
 
-    <EditText
-        android:id="@+id/idPeso"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/idAltura"
-        android:layout_below="@+id/idAltura"
-        android:ems="10"
-        android:hint="Peso"
-        android:inputType="number" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="67dp"
+            android:orientation="horizontal">
 
+            <EditText
+                android:id="@+id/idIdade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="Idade"
+                android:inputType="number" />
 
+            <EditText
+                android:id="@+id/idAltura"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="Altura"
+                android:inputType="numberDecimal" />
+
+            <EditText
+                android:id="@+id/idPeso"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="Peso"
+                android:inputType="numberDecimal" />
+        </LinearLayout>
+
+    </LinearLayout>
 </RelativeLayout>
