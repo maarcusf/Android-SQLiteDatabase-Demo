@@ -85,9 +85,9 @@ public class ModifyActivity extends AppCompatActivity {
                     public void onClick(View v) {
                         String newNome = edNome.getText().toString();
                         String newSobrenome = edSobrenome.getText().toString();
-                        String newIdade = edIdade.getText().toString()+" anos";
-                        String newAltura = edAltura.getText().toString()+"m";
-                        String newPeso = edPeso.getText().toString()+"kg";
+                        String newIdade = edIdade.getText().toString();
+                        String newAltura = edAltura.getText().toString();
+                        String newPeso = edPeso.getText().toString();
 
                         dbManager.update(Integer.parseInt(myID), newNome, newSobrenome, newIdade, newAltura, newPeso);
                         returnHome();

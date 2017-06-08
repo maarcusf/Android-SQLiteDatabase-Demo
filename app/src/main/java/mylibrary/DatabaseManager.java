@@ -33,9 +33,9 @@ public class DatabaseManager {
         ContentValues contentValues = new ContentValues();
         contentValues.put(dbHelper.NOME, nome);
         contentValues.put(dbHelper.SOBRENOME, sobrenome);
-        contentValues.put(dbHelper.IDADE, idade+" anos");
-        contentValues.put(dbHelper.ALTURA, altura+"m");
-        contentValues.put(dbHelper.PESO, peso+"kg");
+        contentValues.put(dbHelper.IDADE, idade);
+        contentValues.put(dbHelper.ALTURA, altura);
+        contentValues.put(dbHelper.PESO, peso);
 
        // contentValues.put(dbHelper.NOME, nome);
         database.insert(dbHelper.TABLE_NAME, null, contentValues);

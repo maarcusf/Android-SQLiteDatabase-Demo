@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
     private SimpleCursorAdapter adapter;
     private DatabaseHelper dbHelper;
 
-    final String[] from = new String[]{dbHelper.ID, dbHelper.NOME, dbHelper.SOBRENOME, dbHelper.ALTURA,dbHelper.IDADE, dbHelper.PESO,
+    final String[] from = new String[]{dbHelper.ID, dbHelper.NOME, dbHelper.SOBRENOME, dbHelper.IDADE,dbHelper.ALTURA, dbHelper.PESO,
     };
     final int[] to = new int[]{R.id.id, R.id.listNome, R.id.listSobrenome, R.id.listIdade, R.id.listAltura, R.id.listPeso};
 
@@ -59,9 +59,9 @@ public class MainActivity extends AppCompatActivity {
             }
         } catch (Exception e) {
             if (adapter.isEmpty()) {
-                Snackbar.make(listView, "Click on fab to add list", Snackbar.LENGTH_LONG).show();
+                Snackbar.make(listView, "Clique no '+' para adicionar um Aluno.", Snackbar.LENGTH_LONG).show();
             } else {
-                Snackbar.make(listView, "Hold on item to modify", Snackbar.LENGTH_LONG).show();
+                Snackbar.make(listView, "Pressione e segure para editar um Aluno.", Snackbar.LENGTH_LONG).show();
             }
         }
 
@@ -80,9 +80,9 @@ public class MainActivity extends AppCompatActivity {
                 String myId = itemID.getText().toString();
                 String myNome = itemNome.getText().toString();
                 String mySobrenome = itemSobrenome.getText().toString();
-                String myIdade = itemIdade.getText().toString()+" anos";
-                String myAltura = itemAltura.getText().toString()+"m";
-                String myPeso = itemPeso.getText().toString()+"kg";
+                String myIdade = itemIdade.getText().toString();
+                String myAltura = itemAltura.getText().toString();
+                String myPeso = itemPeso.getText().toString();
 
                 Intent intent = new Intent(getApplicationContext(), ModifyActivity.class);
                 intent.putExtra("_id", myId);

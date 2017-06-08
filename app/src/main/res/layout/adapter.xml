@@ -66,27 +66,45 @@
 
             <TextView
                 android:id="@+id/listIdade"
-                android:layout_width="68dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.42"
                 android:text="Idade"
-                android:textAlignment="center" />
+                android:textAlignment="viewStart" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" anos"
+                android:textAlignment="viewStart" />
 
             <TextView
                 android:id="@+id/listAltura"
-                android:layout_width="77dp"
+                android:layout_width="71dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.13"
                 android:text="Altura"
-                android:textAlignment="center" />
+                android:textAlignment="textEnd" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="m" />
 
             <TextView
                 android:id="@+id/listPeso"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_weight="0.62"
                 android:text="Peso"
-                android:textAlignment="center" />
+                android:textAlignment="textEnd" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.29"
+                android:text="kg" />
         </LinearLayout>
 
     </LinearLayout>
