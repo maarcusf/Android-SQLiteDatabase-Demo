@@ -4,12 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-
 import com.hazmirulafiq.androidsqlitedatabasedemo.R;
-
-/**
- * Created by mvini on 14/06/2017.
- */
 
 public class InicialActivity  extends AppCompatActivity
 {

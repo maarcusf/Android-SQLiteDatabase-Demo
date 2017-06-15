@@ -1,9 +1,5 @@
 package personal;
 
-/**
- * Created by Raphael Bragança on 23/2/2017.
- */
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;

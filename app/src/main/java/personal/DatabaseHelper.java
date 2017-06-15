@@ -1,9 +1,5 @@
 package personal;
 
-/**
- * Created by Raphael Bragança on 23/2/2017.
- */
-
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;

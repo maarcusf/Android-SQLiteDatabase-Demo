@@ -1,8 +1,5 @@
 package personal;
 
-/**
- * Created by Raphael Bragança on 23/2/2017.
- */
 
 import android.content.ContentValues;
 import android.content.Context;
