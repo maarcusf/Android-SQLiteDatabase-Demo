@@ -13,7 +13,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     // Initialize Database Information
     private static final String DB_NAME = "Personal";
     // Initialize Database version
-    private static final int DB_VERSION = 5;
+    private static final int DB_VERSION = 18;
     // Initialize Table Name
     static final String TABLE_NAME = "PESSOA";
     // Initialize Table from(Columns)
